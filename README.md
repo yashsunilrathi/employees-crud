@@ -13,7 +13,7 @@ A simple and efficient full-stack application for managing a list of employees. 
 * **Frontend:** JavaScript, HTML5, CSS3
 * **Database:** SQLite
 
-  [![Project Demo Video](assets/demo-thumbnail.png)](https://www.loom.com/share/531c2eb6755d47efae8bf0e397345e51?sid=ba30ac5b-0c35-40db-aab2-0d3c3cbd4d2d)
+[Project Demo Video](https://www.loom.com/share/531c2eb6755d47efae8bf0e397345e51?sid=ba30ac5b-0c35-40db-aab2-0d3c3cbd4d2d)
 
 ## Setup and Installation
 
