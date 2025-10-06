@@ -3,11 +3,7 @@ const API_URL = 'http://localhost:3000/api';
 
 const employeeForm = document.getElementById('employee-form');
 const employeeTableBody = document.getElementById('employee-table-body');
-// TODO: Get other form inputs (name, email, position, id)
 
-// --- Functions to interact with the API ---
-
-// Replace the fetchAndRenderEmployees function with this:
 async function fetchAndRenderEmployees() {
   try {
     const response = await fetch(`${API_URL}/employees`);
@@ -33,7 +29,6 @@ async function fetchAndRenderEmployees() {
   }
 }
 // 2. Handle form submission for creating/updating employees
-// Replace the employeeForm.addEventListener block with this:
 employeeForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   
@@ -48,7 +43,7 @@ employeeForm.addEventListener('submit', async (e) => {
 
   let response;
   if (employeeId) {
-    // --- UPDATE (PUT Request) ---
+   
     // This is the block you asked for
     response = await fetch(`${API_URL}/employees/${employeeId}`, {
       method: 'PUT',
@@ -71,11 +66,8 @@ employeeForm.addEventListener('submit', async (e) => {
 
   // Handle the response
   if (response.ok) {
-    // Reset the form to clear all inputs
     employeeForm.reset();
-    // Ensure the hidden ID is also cleared
     document.getElementById('employee-id').value = ''; 
-    // Refresh the employee list on the page
     fetchAndRenderEmployees();
   } else {
     console.error('Failed to save employee');
@@ -84,13 +76,12 @@ employeeForm.addEventListener('submit', async (e) => {
 
 // 3. Handle deleting an employee
 employeeTableBody.addEventListener('click', async (e) => {
-  // --- HANDLE DELETE ---
   if (e.target.classList.contains('delete-btn')) {
     const employeeId = e.target.dataset.id;
     await fetch(`${API_URL}/employees/${employeeId}`, {
       method: 'DELETE',
     });
-    fetchAndRenderEmployees(); // Refresh the list
+    fetchAndRenderEmployees(); 
   }
 
   // --- HANDLE EDIT ---
@@ -108,11 +99,8 @@ employeeTableBody.addEventListener('click', async (e) => {
     document.getElementById('email-input').value = email;
     document.getElementById('position-input').value = position;
     
-    // Store the employee's ID in the hidden input field
     document.getElementById('employee-id').value = employeeId;
   }
 });
 
-
-// Initial load
 fetchAndRenderEmployees();
