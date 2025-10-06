@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
   res.send('Hello from the Employee CRUD API!');
 });
 
-// Replace the GET /api/employees TODO block with this:
 app.get('/api/employees', (req, res) => {
   const sql = "SELECT * FROM employees";
   db.all(sql, [], (err, rows) => {
@@ -30,8 +29,6 @@ app.get('/api/employees', (req, res) => {
   });
 });
 
-// 2. POST /api/employees - Create a new employee
-// Replace the POST /api/employees TODO block with this:
 app.post('/api/employees', (req, res) => {
   const { name, email, position } = req.body;
   const sql = `INSERT INTO employees (name, email, position) VALUES (?,?,?)`;
@@ -49,8 +46,7 @@ app.post('/api/employees', (req, res) => {
   });
 });
 
-// 3. PUT /api/employees/:id - Update an existing employee
-// Replace the PUT /api/employees/:id TODO block with this:
+
 app.put('/api/employees/:id', (req, res) => {
   const { name, email, position } = req.body;
   const sql = `UPDATE employees set 
@@ -72,8 +68,6 @@ app.put('/api/employees/:id', (req, res) => {
   });
 });
 
-// 4. DELETE /api/employees/:id - Delete an employee
-// Replace the DELETE /api/employees/:id TODO block with this:
 app.delete('/api/employees/:id', (req, res) => {
   const sql = 'DELETE FROM employees WHERE id = ?';
   const params = [req.params.id];
