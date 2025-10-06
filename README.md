@@ -1,4 +1,4 @@
-# Employee Management CRUD Application
+# Employees Management CRUD Application
 
 A simple and efficient full-stack application for managing a list of employees. This project demonstrates the core principles of CRUD (Create, Read, Update, Delete) operations using a modern web stack.
 
