@@ -25,5 +25,7 @@ To get this project running locally, please follow these steps:
 
 Clone this project to your local machine.
 ```bash
-git clone [[(https://github.com/yashsunilrathi/employees-crud.git)]]
+git clone [(https://github.com/yashsunilrathi/employees-crud.git)]
 cd employee-crud
+
+[![Project Demo Video](assets/demo-thumbnail.png)]((https://www.loom.com/share/531c2eb6755d47efae8bf0e397345e51?sid=ba30ac5b-0c35-40db-aab2-0d3c3cbd4d2d))
